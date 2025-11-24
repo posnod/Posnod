@@ -1,14 +1,13 @@
 {
   "name": "Posnod | The System Learning",
   "short_name": "Posnod",
-  "description": "Posnod adalah platform pembelajaran sistem modern dan cepat.",
+  "description": "Posnod adalah platform pembelajaran sistem yang modern, cepat, dan mudah digunakan.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "transparent",
-  "theme_color": "transparent",
-
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/icon-192.png",
