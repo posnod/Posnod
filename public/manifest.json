@@ -1,7 +1,7 @@
 {
-  "name": "Posnod | The System Learning",
+  "name": "Posnod - Social Learning Platform",
   "short_name": "Posnod",
-  "description": "Posnod adalah platform pembelajaran sistem yang modern, cepat, dan mudah digunakan.",
+  "description": "Platform pembelajaran sosial yang menyediakan pondasi modern untuk belajar, berbagi pengetahuan, dan berkolaborasi dalam skala luas.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,25 +10,25 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/faviconn-192.png",
+      "src": "/PosnodIcon.ico",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/ico"
     },
     {
-      "src": "/faviconn-512.png",
+      "src": "/PosnodIcon.ico",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/ico"
     },
     {
-      "src": "/faviconn-512.png",
+      "src": "/PosnodIcon.ico",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/PosnodIcon.ico",
       "sizes": "180x180",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "any"
     }
   ]
