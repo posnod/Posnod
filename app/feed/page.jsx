@@ -35,7 +35,7 @@ export default function TopikPage() {
           {topics.map((item, idx) => (
             <div
               key={idx}
-              className='min-w-[280px] sm:min-w-[320px] h-[50vh] bg-gray-100 rounded-2xl p-6 flex flex-col justify-between shadow-sm'
+              className='min-w-[280px] sm:min-w-[320px] h-[50vh] border bg-gray-100 rounded-2xl p-6 flex flex-col justify-between shadow-sm'
             >
               <div>
                 {/* Icon & Title */}
