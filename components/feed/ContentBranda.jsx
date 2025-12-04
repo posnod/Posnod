@@ -9,7 +9,7 @@ const ContentBranda = ({ topics }) => {
   const { scrollRefCart, onMouseDown, onMouseLeaveOrUp, onMouseMove } = useDragScroll();
 
   return (
-    <>
+    <div className='px-8'>
       <div className='flex items-center justify-between'>
         <h2 className='text-lg font-semibold flex items-center gap-2'>
           <Target size={20} /> Topik
@@ -66,7 +66,7 @@ const ContentBranda = ({ topics }) => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

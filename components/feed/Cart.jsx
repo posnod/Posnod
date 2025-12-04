@@ -11,12 +11,12 @@ const Cart = ({ item }) => {
         <p className='mt-4 text-lg leading-snug text-gray-800'>{item.text}</p>
       </div>
 
-      <div className='mt-6 flex items-center justify-between'>
+      <button type="button" className='mt-6 flex items-center justify-between bg-[#FFFFFF] px-3 py-2 rounded-full shadow-sm'>
         <span className='text-sm text-gray-600'>{item.tag}</span>
-        <button className='w-8 h-8 rounded-full bg-white shadow flex items-center justify-center'>
+        <span>
           →
-        </button>
-      </div>
+        </span>
+      </button>
     </div>
   );
 };
