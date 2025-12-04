@@ -16,3 +16,11 @@
 body {
   font-family: var(--font-hemera), sans-serif;
 }
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
