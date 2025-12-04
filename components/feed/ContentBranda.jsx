@@ -9,37 +9,40 @@ const ContentBranda = ({ topics }) => {
   const { scrollRefCart, onMouseDown, onMouseLeaveOrUp, onMouseMove } = useDragScroll();
 
   return (
-    <div className='px-8'>
-      <div className='flex items-center justify-between'>
-        <h2 className='text-lg font-semibold flex items-center gap-2'>
+    <div className='px-4 md:px-8'>
+      {/* Header */}
+      <div className='flex items-center justify-between flex-wrap gap-3'>
+        <h2 className='text-base md:text-lg font-semibold flex items-center gap-2'>
           <Target size={20} /> Topik
         </h2>
 
         <div className='flex items-center gap-3'>
           <Plus
-            size={28}
+            size={26}
             className='cursor-pointer hover:scale-110 transition'
           />
           <Menu
-            size={28}
+            size={26}
             className='cursor-pointer hover:scale-110 transition'
           />
 
-          {/* tombol kanan kiri */}
-          <div className='flex items-center gap-3'>
-            <button onClick={scrollLeft} type='button'>
+          {/* Arrow Nav (hidden on small screen) */}
+          <div className='hidden sm:flex items-center gap-3'>
+            <button
+              onClick={scrollLeft}
+              type='button'
+            >
               <ChevronLeft
-                size={28}
+                size={26}
                 className='hover:scale-110 transition'
               />
             </button>
-
             <button
               onClick={scrollRight}
               type='button'
             >
               <ChevronRight
-                size={28}
+                size={26}
                 className='hover:scale-110 transition'
               />
             </button>
@@ -47,13 +50,13 @@ const ContentBranda = ({ topics }) => {
         </div>
       </div>
 
-      {/* scrollable list */}
+      {/* Scroll List */}
       <div
         ref={(el) => {
           scrollRef.current = el;
           scrollRefCart.current = el;
         }}
-        className='flex gap-6 overflow-x-auto no-scrollbar mt-6 pb-4 '
+        className='flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar mt-5 sm:mt-6 pb-4'
         onMouseDown={onMouseDown}
         onMouseUp={onMouseLeaveOrUp}
         onMouseLeave={onMouseLeaveOrUp}
