@@ -1,0 +1,220 @@
+@import 'tailwindcss';
+@import './typography.css';
+@import './tokens.css';
+
+@font-face {
+  font-family: "Heme Pro";
+  src: url("../../public/fonts/Heme-Pro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Heme Pro";
+}
+
+@layer components {
+      /* =========> BACKGROUND <========= */
+    .bg-primary {
+    background-color: var(--color-primary);
+    }
+
+      /* =========> BODER <========= */
+    .border-light {
+      border-color: var(--color-primary-100);
+    }
+    .border-medium {
+      border-color: var(--color-primary-200);
+    }
+    .border-dark {
+      border-color: var(--color-primary-900);
+    }
+
+    /* =========> TEXT <========= */
+    .text-primary {
+        color: var(--color-primary-900);
+    }
+    .hover-text-primary:hover {
+      color: var(--color-primary-600)
+    }
+    .text-secondary {
+        color: var(--color-primary-500);
+    }
+    .text-tertiary {
+        color: var(--color-primary-400);
+    }
+    .text-disabled {
+        color: var(--color-primary-300);
+    }
+
+    /* ========= CONTENT ========= */
+    /* Layout Mobile */
+    .content-p1 {
+      max-width: auto;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .content-p2 {
+      max-width: auto;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .content-p3 {
+      max-width: auto;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Layout Tablet */
+  @media (min-width: 769px) {
+    .content-p1 {
+      max-width: auto;
+      padding: 0 60px;
+    }
+    .content-p2 {
+      max-width: auto;
+      padding: 0 40px;
+    }
+    .content-p3 {
+      max-width: auto;
+      padding: 0 32px;
+    }
+  }
+
+    /* Layout Desktop */
+  @media (min-width: 1024px) {
+    .content-p1 {
+      max-width: auto;
+      padding: 0 200px;
+    }
+    .content-p2 {
+      max-width: auto;
+      padding: 0 140px;
+    }
+    .content-p3 {
+      max-width: auto;
+      padding: 0 100px;
+    }
+  }
+  
+    /* =========> BUTTON <========= */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transform: translateZ(0);
+  }
+
+    /* ========= SIZE ========= */
+  .btn-sm {
+    padding: 8px 16px;
+    --btn-icon-size: 12px;
+    --btn-font-mobile: var(--mobile-button-small);
+    --btn-font-tablet: var(--tablet-button-small);
+    --btn-font-desktop: var(--desktop-button-small);
+  }
+
+  .btn-md { 
+    padding: 12px 24px;
+    --btn-icon-size: 16px;
+    --btn-font-mobile: var(--mobile-button-medium);
+    --btn-font-tablet: var(--tablet-button-medium);
+    --btn-font-desktop: var(--desktop-button-medium);
+  }
+
+  .btn-lg { 
+    padding: 16px 32px;
+    --btn-icon-size: 20px;
+    --btn-font-mobile: var(--mobile-button-large);
+    --btn-font-tablet: var(--tablet-button-large);
+    --btn-font-desktop: var(--desktop-button-large);
+  }
+
+  .btn-xl { 
+    padding: 20px 40px;
+    --btn-icon-size: 24px;
+    --btn-font-mobile: var(--mobile-button-Extra-large);
+    --btn-font-tablet: var(--tablet-button-Extra-large);
+    --btn-font-desktop: var(--desktop-button-Extra-large);
+  }
+
+    /* ========= BUTTON RESPONSIVE ========= */
+  .btn {
+    font-size: var(--btn-font-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .btn {
+      font-size: var(--btn-font-tablet);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .btn {
+      font-size: var(--btn-font-desktop);
+    }
+  }
+
+  /* ========= BUTTON VARIANTS ========= */
+  .btn-fill {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+  }
+
+  .btn-fill:hover {
+    background: var(--btn-primary-hover);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--btn-secondary-border);
+    color: var(--btn-secondary-text);
+  }
+
+  .btn-outline:hover {
+    border: 1px solid var(--btn-secondary-hover);
+  }
+
+  .btn-text {
+    background: transparent;
+    color: var(--btn-tertiary-text);
+  }
+
+  .btn-text:hover {
+    background: var(--btn-tertiary-hover);
+  }
+
+  .btn-ghost {
+    background: var(--color-primary-200);
+    color: var(--color-primary-900);
+  }
+
+  .btn-ghost:hover {
+    background: var(--color-primary-300);
+  }
+
+  .btn-accent {
+    background: var(--btn-accent-bg);
+    color: var(--btn-accent-text);
+  }
+
+  .btn-accent:hover {
+    background: var(--btn-accent-hover);
+  }
+
+    /* ========= RADIUS ========= */
+  .radius-4 { border-radius: 4px; }
+  .radius-8 { border-radius: 8px; }
+  .radius-16 { border-radius: 16px; }
+  .radius-32 { border-radius: 32px; }
+
+    /* ========= GAP ========= */
+  .gap-sm { gap: 32px; }
+  .gap-md { gap: 48px; }
+  .gap-lg { gap: 64px; }
+  .gap-xl { gap: 80px; }
+  
+}

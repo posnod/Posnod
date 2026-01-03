@@ -1,0 +1,122 @@
+:root {
+    /* =========> COLOR SYSTEM <========= */
+    /* BASE COLOR */
+    --color-white: #ffffff;
+    --color-primary-50: #F8F9FA;
+    --color-primary-100: #E9ECEF;
+    --color-primary-200: #DEE2E6;
+    --color-primary-300: #CED4DA;
+    --color-primary-400: #ADB5BD;
+    --color-primary-500: #6C757D;
+    --color-primary-600: #495057;
+    --color-primary-700: #343A40;
+    --color-primary-800: #1E1E22;
+    --color-primary-900: #121216;
+    --color-black: #000000;
+
+    /* ACCENT - Untuk interaksi saja */
+    --color-accent: #128B5D;
+    --color-accent-hover: #056943;
+
+    /* STATE COLORS */
+    --state-success: #22C55E;
+    --state-error: #DC3525;
+    --state-warning: #FFC107;
+    --state-info: #17A2B8;
+
+    /* TUF COLOR */
+    --tuf-riset: #149B9B;
+    --tuf-bisnis: #F7941D;
+    --tuf-matematika: #F80000;
+    --tuf-sosial: #E49397;
+    --tuf-teknologi: #305C77;
+    --tuf-filsafat: #799074;
+    --tuf-hukum: #5D4037;
+    --tuf-pendidikan: #A71DF7;
+    --tuf-desain: #9A486E;
+    --tuf-spiritual: #34849B;
+    --tuf-kesehatan: #38BE7E;
+    --tuf-rekayasa: #4288FE;
+    --tuf-lingkungan: #4DB50C;
+    --tuf-bahasa: #795548;
+    --tuf-kreatif: #CD71A2;
+    --tuf-psikologi: #8E24AA;
+
+    /* INTERACTIVE STATE - Hover States (Neutral) */
+    --state-hover: rgba(0,0,0,0.05);
+
+    /* INTERACTIVE STATE - Focus States (Accent) */
+    --state-hover: rgba(3,75,50,0.1);
+    --focus-ring: 0 0 0 3px rgba(3,75,50,0.3);
+
+    /* INTERACTIVE STATE - Selection (Subtle) */
+    --state-selected: rgba(0,0,0,0.08);
+
+    /* BACKGROUNDS - Light Theme (Default) */
+    --bg-primary: var(--color-white);
+    --bg-secondary: var(--color-primary-50);
+    --bg-tertiary: var(--color-primary-100);
+
+    /* BACKGROUNDS - Dark Theme (Optional) */
+    --bg-primary: var(--color-primary-900);
+    --bg-secondary: var(--color-primary-800);
+    --bg-tertiary: var(--color-primary-700);
+
+    /* TEXT COLORS - On Light Background */
+    --text-primary: var(--color-primary-900);
+    --text-secondary: var(--color-primary-500);
+    --text-tertiary: var(--color-primary-400);
+    --text-disabled: var(--color-primary-300);
+
+    /* TEXT COLORS - On Dark Background */
+    --text-dark-primary: var(--color-white);
+    --text-dark-secondary: rgba(225,225,225,0.6);
+
+    /* BORDERS & DIVINDERS */
+    --border-light: var(--color-primary-100);
+    --border-medium: var(--color-primary-200);
+    --border-dark: var(--color-primary-900);
+
+    /* BUTTON - Primary Button (Neutral) */
+    --btn-primary-bg: var(--color-primary-900);
+    --btn-primary-text: var(--color-white);
+    --btn-primary-hover: var(--color-black);
+
+    /* BUTTON - Secondary Button (Outline) */
+    --btn-secondary-border: var(--color-primary-300);
+    --btn-secondary-text: var(--color-primary-900);
+    --btn-secondary-hover: var(--color-primary-500);
+
+    /* BUTTON - Tertiary Button (Text Only) */
+    --btn-tertiary-text: var(--color-primary-900);
+    --btn-tertiary-hover: var(--color-primary-50);
+
+    /* BUTTON - Accent Button (Untuk Primary Action) */
+    --btn-accent-bg: var(--color-accent);
+    --btn-accent-text: var(--color-white);
+    --btn-accent-hover: var(--color-accent-hover);
+
+    /* INPUTS & FORMS */
+    --input-bg: var(--color-white);
+    --input-border: var(--color-primary-200);
+    --input-border-focus: var(--color-accent);
+    --input-label: var(--color-primary-400);
+
+    /* CARDS & CONTAINERS */
+    --card-bg: var(--color-white);
+    --card-border: var(--color-primary-100);
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --card-radius: var(--radius-lg);
+
+    /* NAVIGATION */
+    --nav-bg: var(--color-white);
+    --nav-border: var(--color-primary-100);
+    --nav-text: var(--color-primary-900);
+    --nav-active: var(--color-accent);
+
+    /* =========> RADIUS PIXEL <========= */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 32px;
+}

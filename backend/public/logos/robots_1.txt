@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://posnod.com/sitemap.xml
