@@ -8,9 +8,16 @@ import Navbar from '@/components/layouts/header/parts/center/Navbar';
 import LogoShield from '@/components/icons/system/ShieldIcon';
 import DotsVerticalIcon from '@/components/icons/ui/DotsVerticalIcon';
 import CloseIcon from '@/components/icons/ui/CloseIcon';
+import { usePathname } from 'next/navigation';
 
 export default function HeaderTemplate({ size = "lg" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  if (!isHomePage) {
+    return null; // Jangan tampilkan header di luar halaman home
+  }
 
   return (
     <header className="w-full bg-primary border-b relative z-40">

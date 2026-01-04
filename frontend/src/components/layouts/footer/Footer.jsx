@@ -1,6 +1,16 @@
+"use client";
+
 import { Layout } from "@/components/layouts/Layout";
+import { usePathname } from "next/navigation";
 
 export default function Footer({ children, size = "lg" }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  if (!isHomePage) {
+    return null;  // Jangan tampilkan footer di luar halaman home
+  }
+
   return (
     <footer className="w-full bg-primary border-t py-6">
       <Layout size={size}>
