@@ -9,7 +9,7 @@ use Laravel\Socialite\Socialite;
 class SocialAuthController extends Controller
 {
     public function redirect($provider)
-    {   
+    {
         return Socialite::driver($provider)
             ->stateless()
             ->redirect();
@@ -38,6 +38,16 @@ class SocialAuthController extends Controller
         return response()->json([
             'user' => $user,
             'token' => $token
+        ]);
+    }
+
+    public function logout(Request $request)
+    {
+        // Hapus token yang sedang dipakai
+        $request->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'message' => 'Logged out successfully'
         ]);
     }
 }
