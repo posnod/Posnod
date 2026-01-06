@@ -28,11 +28,5 @@ export const topics = [
     title: 'Teknologi & Inovasi',
     desc: 'Karena memahami orang lain dimulai dari ngobrol sama diri sendiri.',
     color: 'bg-purple-100',
-  },
-  {
-    id: 6,
-    title: 'Teknologi & Inovasi',
-    desc: 'Karena memahami orang lain dimulai dari ngobrol sama diri sendiri.',
-    color: 'bg-purple-100',
-  },
+  }
 ];

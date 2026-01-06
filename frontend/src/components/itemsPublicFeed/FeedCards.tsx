@@ -1,6 +1,6 @@
 'use client';
 
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useRef } from 'react';
 
 type Topic = {
   id: number;
@@ -11,14 +11,45 @@ type Topic = {
 
 interface Props {
   topics: Topic[];
-};
+}
 
 const FeedCards = forwardRef<HTMLDivElement, Props>(
-  ({ topics }, ref) => {
+  ({ topics }, externalRef) => {
+    const isDown = useRef(false);
+    const startX = useRef(0);
+    const scrollLeft = useRef(0);
+
+    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+      isDown.current = true;
+      startX.current = e.pageX - e.currentTarget.offsetLeft;
+      scrollLeft.current = e.currentTarget.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+      isDown.current = false;
+    };
+
+    const handleMouseUp = () => {
+      isDown.current = false;
+    };
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!isDown.current) return;
+      e.preventDefault();
+
+      const x = e.pageX - e.currentTarget.offsetLeft;
+      const walk = (x - startX.current) * 1.2; // speed
+      e.currentTarget.scrollLeft = scrollLeft.current - walk;
+    };
+
     return (
       <div
-        ref={ref}
-        className="flex gap-6 overflow-x-auto scrollbar-hide"
+        ref={externalRef}
+        className="flex gap-6 overflow-x-auto scrollbar-hide select-none"
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
       >
         {topics.map((item) => (
           <div
@@ -46,5 +77,6 @@ const FeedCards = forwardRef<HTMLDivElement, Props>(
     );
   }
 );
+
 
 export default FeedCards;
