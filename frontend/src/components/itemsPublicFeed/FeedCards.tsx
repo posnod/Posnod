@@ -18,12 +18,12 @@ const FeedCards = forwardRef<HTMLDivElement, Props>(
     return (
       <div
         ref={ref}
-        className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
+        className="flex gap-6 overflow-x-auto scrollbar-hide"
       >
         {topics.map((item) => (
           <div
             key={item.id}
-            className="min-w-80 h-87.5 bg-gray-200 rounded-2xl p-6 flex flex-col justify-between"
+            className="min-w-80 h-99 bg-gray-200 rounded-2xl p-6 flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center gap-2 mb-4">
