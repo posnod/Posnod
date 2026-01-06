@@ -14,7 +14,7 @@ const NavbarFeed = () => {
 
   return (
     <header className='border-b bg-white'>
-      <div className='max-w-7xl mx-auto py-3'>
+      <div className='max-w-7xl mx-auto px-4 md:px-2 py-3'>
         {/* ================= MOBILE ================= */}
         <div className='sm:hidden'>
           {searchMode ? (
